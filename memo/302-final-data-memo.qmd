@@ -33,9 +33,8 @@ citation-location: margin
 
 ## Data source
 
-[Dataset Link](https://www.kaggle.com/datasets/shivamb/netflix-shows)
-Accessed November 2nd 2025
+[Dataset Link](https://www.kaggle.com/datasets/shivamb/netflix-shows)^[Accessed November 2nd 2025]
 
 
 ## Why I chose this data
-
+I enjoy inspecting catalogs of shows and movies, so this dataset was a great option for me. There is a bit of a challenge with the data as well, so I wanted to touch up on my data wrangling skills again. I plan on answering questions like "Which genres of shows/movies on Netflix show up often?", "What years or months were the most/least titles added?" or, "Are there more movies or TV Shows in this collection of data?" I am hoping to tell a story that tries to describe the frequent choices Netflix makes when curating their catalogs.
