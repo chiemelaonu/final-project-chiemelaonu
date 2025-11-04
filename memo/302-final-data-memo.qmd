@@ -1,5 +1,27 @@
 ---
-title: "302-final-data-memo"
-format: html
+title: "302 Final Project Data Memo"
+subtitle: |
+  | Final Project 
+  | Data Visualization (STAT 302)
+author: "Chiemela Onuoha"
+pagetitle: "DM1 Chiemela Onuoha"
+date: "November 4, 2025"
+
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    embed-resources: true
+    link-external-newwindow: true
+
+execute:
+  warning: false
+
+from: markdown+emoji
+reference-location: margin
+citation-location: margin
 ---
+
+
 
