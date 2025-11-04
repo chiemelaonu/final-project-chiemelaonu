@@ -23,5 +23,19 @@ reference-location: margin
 citation-location: margin
 ---
 
+::: {.callout-tip icon=false}
 
+## Github Repo Link
+
+[Chiemela Onuoha's Github](https://github.com/chiemelaonu/final-project-chiemelaonu)
+
+:::
+
+## Data source
+
+[Dataset Link](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+Accessed November 2nd 2025
+
+
+## Why I chose this data
 
