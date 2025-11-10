@@ -35,6 +35,20 @@ citation-location: margin
 
 [Dataset Link](https://www.kaggle.com/datasets/shivamb/netflix-shows)^[Accessed November 2nd 2025]
 
+## Peek at Dataset
+The dataset has 12 variables with ~ 8800 observations on an assortment of Netflix titles.
+```{r}
+#| label: data-peek
+#| echo: false
+
+library(tidyverse)
+
+netflix <- read_csv("data/netflix_titles.csv")
+
+
+netflix 
+```
+
 
 ## Why I chose this data
 I enjoy inspecting catalogs of shows and movies, so this dataset was a great option for me. There is a bit of a challenge with the data as well, so I wanted to touch up on my data wrangling skills again. I plan on answering questions like "Which genres of shows/movies on Netflix show up often?", "What years or months were the most/least titles added?" or, "Are there more movies or TV Shows in this collection of data?" I am hoping to tell a story that tries to describe the frequent choices Netflix makes when curating their catalogs.
@@ -44,3 +58,4 @@ I plan to use a mix of static graphics and a few a Shiny apps as well. I will mo
 
 ## Initial Data Issues
 I have been able to load in and inspect the data. When inspecting the data, I noticed that there are some missing values in the dataset that would need to be handled, as well as having to use Regular Expressions to fully separate each `country` listed and each genre in `listed_in` for the TV shows/movies.
+

@@ -3053,6 +3053,7 @@ vertical-align: -.125em;
    
   <ul>
   <li><a href="#data-source" id="toc-data-source" class="nav-link active" data-scroll-target="#data-source">Data source</a></li>
+  <li><a href="#peek-at-dataset" id="toc-peek-at-dataset" class="nav-link" data-scroll-target="#peek-at-dataset">Peek at Dataset</a></li>
   <li><a href="#why-i-chose-this-data" id="toc-why-i-chose-this-data" class="nav-link" data-scroll-target="#why-i-chose-this-data">Why I chose this data</a></li>
   <li><a href="#visualization-plan" id="toc-visualization-plan" class="nav-link" data-scroll-target="#visualization-plan">Visualization Plan</a></li>
   <li><a href="#initial-data-issues" id="toc-initial-data-issues" class="nav-link" data-scroll-target="#initial-data-issues">Initial Data Issues</a></li>
@@ -3113,6 +3114,29 @@ Github Repo Link
 <h2 class="anchored" data-anchor-id="data-source">Data source</h2>
 <p><a href="https://www.kaggle.com/datasets/shivamb/netflix-shows">Dataset Link</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup> Accessed November 2nd 2025</p></div></div></section>
+<section id="peek-at-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="peek-at-dataset">Peek at Dataset</h2>
+<p>The dataset has 12 variables with ~ 8800 observations on an assortment of Netflix titles.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8,807 × 12
+   show_id type    title   director cast  country date_added release_year rating
+   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt; 
+ 1 s1      Movie   Dick J… Kirsten… &lt;NA&gt;  United… September…         2020 PG-13 
+ 2 s2      TV Show Blood … &lt;NA&gt;     Ama … South … September…         2021 TV-MA 
+ 3 s3      TV Show Gangla… Julien … Sami… &lt;NA&gt;    September…         2021 TV-MA 
+ 4 s4      TV Show Jailbi… &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;    September…         2021 TV-MA 
+ 5 s5      TV Show Kota F… &lt;NA&gt;     Mayu… India   September…         2021 TV-MA 
+ 6 s6      TV Show Midnig… Mike Fl… Kate… &lt;NA&gt;    September…         2021 TV-MA 
+ 7 s7      Movie   My Lit… Robert … Vane… &lt;NA&gt;    September…         2021 PG    
+ 8 s8      Movie   Sankofa Haile G… Kofi… United… September…         1993 TV-MA 
+ 9 s9      TV Show The Gr… Andy De… Mel … United… September…         2021 TV-14 
+10 s10     Movie   The St… Theodor… Meli… United… September…         2021 PG-13 
+# ℹ 8,797 more rows
+# ℹ 3 more variables: duration &lt;chr&gt;, listed_in &lt;chr&gt;, description &lt;chr&gt;</code></pre>
+</div>
+</div>
+</section>
 <section id="why-i-chose-this-data" class="level2">
 <h2 class="anchored" data-anchor-id="why-i-chose-this-data">Why I chose this data</h2>
 <p>I enjoy inspecting catalogs of shows and movies, so this dataset was a great option for me. There is a bit of a challenge with the data as well, so I wanted to touch up on my data wrangling skills again. I plan on answering questions like “Which genres of shows/movies on Netflix show up often?”, “What years or months were the most/least titles added?” or, “Are there more movies or TV Shows in this collection of data?” I am hoping to tell a story that tries to describe the frequent choices Netflix makes when curating their catalogs.</p>
