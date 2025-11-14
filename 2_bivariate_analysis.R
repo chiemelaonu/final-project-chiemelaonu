@@ -23,9 +23,13 @@ netflix |>
   ggplot(aes(year_added, n, color = type)) +
   geom_line() +
   scale_x_continuous(
-    breaks = seq(2008, 2021, 1),
-    expand = c(0, 0)
+    breaks = seq(2008, 2021, 1), # range for plot
+    expand = c(0, 0) # remove extra space
     ) +
+  scale_color_manual(
+    values = c("Movie" = "#FF9F9B", "TV Show" = "#A1C9F4"), # changing colors for lines
+    labels = c("Movie", "TV Show") # adding labels for the legend
+  ) +
   labs(
     title = "TBA",
     caption = "TBA",
