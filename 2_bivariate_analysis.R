@@ -1,6 +1,11 @@
 ## STAT 302 Final Project ----
 # Bivariate Analysis ----
 
+# load packages ---
+library(tidyverse)
+
+# read in data ----
+netflix <- read_csv("data/netflix_titles.csv")
 
 # type of listing vs year released ----
 netflix |>
