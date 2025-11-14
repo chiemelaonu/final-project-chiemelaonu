@@ -80,7 +80,7 @@ year_counts |> # plotting frequencies
 ## bar graph that shows the number of observations within each release year in the dataset ----
 netflix |>
   ggplot(aes(release_year)) +
-  geom_bar(fill = "black") +
+  geom_bar(fill = "#B6ACD1") +
   labs(
     x = "Release Year"
   ) +
