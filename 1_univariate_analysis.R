@@ -85,3 +85,19 @@ netflix |>
     x = "Release Year"
   ) +
   theme_minimal()
+
+# count number of tv shows and movies in dataset
+netflix |>
+  count(type, sort = TRUE) |>
+  na.omit() |>
+  ggplot(aes(type, n)) +
+  geom_col(fill = "lightblue") +
+  labs(
+    title = "TBA",
+    caption = "TBA",
+    x = "Type of Listing",
+    y = "Count"
+  ) +
+  theme_minimal()
+
+
