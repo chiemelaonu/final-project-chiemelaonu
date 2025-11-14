@@ -19,16 +19,23 @@ netflix |>
     date_added = lubridate::mdy(date_added), # converting col to date type
     year_added = lubridate::year(date_added) # extracting year added
   ) |>
+  na.omit() |>
   count(type, year_added) |>
   ggplot(aes(year_added, n, color = type)) +
   geom_line() +
+  geom_point(aes(shape = type)) +
   scale_x_continuous(
     breaks = seq(2008, 2021, 1), # range for plot
-    expand = c(0, 0) # remove extra space
+    expand = c(0.01, 0) # extra space
     ) +
   scale_color_manual(
     values = c("Movie" = "#FF9F9B", "TV Show" = "#A1C9F4"), # changing colors for lines
     labels = c("Movie", "TV Show"), # adding labels for the legend
+    name = NULL # remove legend title
+  ) +
+  scale_shape_manual(
+    values = c("Movie" = 16, "TV Show" = 17), # changing shapes for lines
+    labels = c("Movie", "TV Show"), 
     name = NULL
   ) +
   labs(
