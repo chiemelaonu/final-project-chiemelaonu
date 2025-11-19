@@ -337,32 +337,641 @@ Chiemela Onuoha
 </div>
 
 </section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
-</section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li>For this project, I am using a dataset consisting of listings of over 8,000 movies and TV shows available on the Netflix streaming platform.<br>
+</li>
+<li>I chose this data because enjoy inspecting catalogs of shows and movies, so this dataset was a great option for me. There is a bit of a challenge with the data as well, allowing me to touch up on my data wrangling skills.<br>
+</li>
+<li>The dataset has 12 variables and 8,807 observations, with recorded titles added from 2008 to 2021.</li>
 </ul>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<section id="data-source" class="slide level2">
+<h2>Data Source</h2>
+<ul>
+<li>Data was found on <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows">Kaggle.com</a><sup>1</sup> from user “shivamb”.</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Accessed November 2nd, 2025</p></li></ol></aside></section>
+<section id="univariate-analysis" class="slide level2 scrollable">
+<h2>Univariate Analysis</h2>
+<div class="content-center">
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="cell-output-display">
+<div id="spjimgxkrc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#spjimgxkrc table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#spjimgxkrc thead, #spjimgxkrc tbody, #spjimgxkrc tfoot, #spjimgxkrc tr, #spjimgxkrc td, #spjimgxkrc th {
+  border-style: none;
+}
+
+#spjimgxkrc p {
+  margin: 0;
+  padding: 0;
+}
+
+#spjimgxkrc .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#spjimgxkrc .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#spjimgxkrc .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#spjimgxkrc .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#spjimgxkrc .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#spjimgxkrc .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#spjimgxkrc .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#spjimgxkrc .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#spjimgxkrc .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#spjimgxkrc .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#spjimgxkrc .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#spjimgxkrc .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#spjimgxkrc .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#spjimgxkrc .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#spjimgxkrc .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#spjimgxkrc .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#spjimgxkrc .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#spjimgxkrc .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#spjimgxkrc .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#spjimgxkrc .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#spjimgxkrc .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#spjimgxkrc .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#spjimgxkrc .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#spjimgxkrc .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#spjimgxkrc .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#spjimgxkrc .gt_left {
+  text-align: left;
+}
+
+#spjimgxkrc .gt_center {
+  text-align: center;
+}
+
+#spjimgxkrc .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#spjimgxkrc .gt_font_normal {
+  font-weight: normal;
+}
+
+#spjimgxkrc .gt_font_bold {
+  font-weight: bold;
+}
+
+#spjimgxkrc .gt_font_italic {
+  font-style: italic;
+}
+
+#spjimgxkrc .gt_super {
+  font-size: 65%;
+}
+
+#spjimgxkrc .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#spjimgxkrc .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#spjimgxkrc .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#spjimgxkrc .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#spjimgxkrc .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#spjimgxkrc .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#spjimgxkrc .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#spjimgxkrc .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#spjimgxkrc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th class="gt_heading gt_title gt_font_normal gt_bottom_border"><strong>Distinct Genres for Listings</strong></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Documentaries</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">International TV Shows</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">TV Dramas</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">TV Mysteries</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Crime TV Shows</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">TV Action &amp; Adventure</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Docuseries</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Reality TV</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Romantic TV Shows</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">TV Comedies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">TV Horror</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Children &amp; Family Movies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Dramas</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Independent Movies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">International Movies</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">British TV Shows</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Comedies</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Spanish-Language TV Shows</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Thrillers</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Romantic Movies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Music &amp; Musicals</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Horror Movies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Sci-Fi &amp; Fantasy</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">TV Thrillers</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Kids' TV</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Action &amp; Adventure</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">TV Sci-Fi &amp; Fantasy</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Classic Movies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Anime Features</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Sports Movies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Anime Series</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Korean TV Shows</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Science &amp; Nature TV</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Teen TV Shows</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Cult Movies</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">TV Shows</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Faith &amp; Spirituality</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">LGBTQ Movies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Stand-Up Comedy</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Movies</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="listed_in">Stand-Up Comedy &amp; Talk Shows</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="listed_in">Classic &amp; Cult TV</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd gt_sourcenotes">
+<td class="gt_sourcenote">Source: <em>Kaggle.com</em></td>
+</tr>
+</tfoot>
+
+</table>
+
 </div>
 </div>
-<div class="quarto-auto-generated-content">
+</div>
+</div>
+</section>
+<section id="univariate-analysis-1" class="slide level2">
+<h2>Univariate Analysis</h2>
+
+<img data-src="final_project_presentation_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="univariate-analysis-2" class="slide level2">
+<h2>Univariate Analysis</h2>
+
+<img data-src="final_project_presentation_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="bivariate-analysis" class="slide level2">
+<h2>Bivariate Analysis</h2>
+
+<img data-src="final_project_presentation_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
 </section>
+
     </div>
   </div>
 
