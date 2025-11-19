@@ -51,3 +51,13 @@ netflix |>
     legend.direction = "horizontal"
   )
 
+
+# type by rating ----
+
+
+counts <- netflix |>
+  count(type, rating)
+
+ggplot(counts, aes(x = rating, y = type, size = n, color = type)) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
