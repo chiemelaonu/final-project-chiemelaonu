@@ -3,23 +3,155 @@ title: "Final Project"
 author: "Chiemela Onuoha"
 format: revealjs
 editor: visual
+execute:
+  echo: false
 ---
 
-## Quarto
+## Introduction
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+- For this project, I am using a dataset consisting of listings of over 8,000 movies and TV shows available on the Netflix streaming platform.  
+- I chose this data because enjoy inspecting catalogs of shows and movies, so this dataset was a great option for me. There is a bit of a challenge with the data as well, allowing me to touch up on my data wrangling skills.  
+- The dataset has 12 variables and 8,807 observations, with recorded titles added from 2008 to 2021.
 
-## Bullets
 
-When you click the **Render** button a document will be generated that includes:
+## Data Source
 
--   Content authored with markdown
--   Output from executable code
+- Data was found on [Kaggle.com](https://www.kaggle.com/datasets/shivamb/netflix-shows)^[Accessed November 2nd, 2025] from user "shivamb". 
 
-## Code
+## Univariate Analysis {.scrollable}
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+::: {.content-center}
+```{r}
+library(tidyverse)
+library(gt)
+library(gtExtras)
+netflix <- read_csv("data/netflix_titles.csv")
+
+# distinct genres
+netflix |>
+  separate_rows(listed_in, sep = ",\\s*") |>
+  distinct(listed_in) |>
+  filter(!is.na(listed_in) & listed_in != "NA") |>
+  gt() |>
+   tab_header(
+    title = md("**Distinct Genres for Listings**")
+   ) |>
+  tab_source_note(
+    source_note = md("Source: *Kaggle.com*")
+    ) |>
+  tab_options(
+    column_labels.hidden = TRUE   
+  )
+
+```
+:::
+
+## Univariate Analysis
 
 ```{r}
-1 + 1
+# number of times each genre/category appears in dataset 
+genre_counts <- netflix |>
+  separate_rows(listed_in, sep = ",\\s*") |>
+  count(listed_in, sort = TRUE) |>
+  na.omit() 
+
+# plot of genre counts
+genre_counts |>
+  ggplot(aes(listed_in, n)) +
+  geom_col(fill = "antiquewhite4") +
+  labs(
+    x = "Genres",
+    y = "Number of Titles",
+    title = "Distribution of Distinct Genre Counts",
+    caption = "Data Sourced from Kaggle.com"
+  ) +
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(
+      angle = 45,
+      hjust = 1,
+      size = 8,
+      face = "bold"
+      ),
+    plot.title = element_text(size = 18)
+  )
 ```
+
+## Univariate Analysis
+
+```{r}
+
+year_counts <- netflix |>
+  mutate(
+    date_added = lubridate::mdy(date_added), # converting col to date type
+    year_added = lubridate::year(date_added) # extracting year added
+    ) |> # counting frequency years appear in dataset
+  count(year_added, sort = TRUE) |>
+  na.omit()
+
+year_counts |> # plotting frequencies
+  ggplot(aes(year_added, n)) +
+  geom_col(fill = "#4E2A84") +
+  scale_x_continuous(
+    breaks = seq(2008, 2021, 1),
+    expand = c(0, 0)
+  ) +
+  labs(
+    title = "Bar Chart Showing Counts of Titles Added Each Year (2008-2021)",
+    caption = "Data Sourced from Kaggle.com",
+    x = "Year Added",
+    y = "Number of Titles"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 18)
+  )
+```
+
+## Bivariate Analysis
+
+```{r}
+# type of listing vs year added ----
+netflix |>
+  mutate(
+    date_added = lubridate::mdy(date_added), # converting col to date type
+    year_added = lubridate::year(date_added) # extracting year added
+  ) |>
+  na.omit() |>
+  count(type, year_added) |>
+  ggplot(aes(year_added, n, color = type)) +
+  geom_line() +
+  geom_point(aes(shape = type)) +
+  scale_x_continuous(
+    breaks = seq(2008, 2021, 1), # range for plot
+    expand = c(0.01, 0) # extra space
+    ) +
+  scale_color_manual(
+    values = c("Movie" = "#FF9F9B", "TV Show" = "#A1C9F4"), # changing colors for lines
+    labels = c("Movie", "TV Show"), # adding labels for the legend
+    name = NULL # remove legend title
+  ) +
+  scale_shape_manual(
+    values = c("Movie" = 16, "TV Show" = 17), # changing shapes for lines
+    labels = c("Movie", "TV Show"), 
+    name = NULL
+  ) +
+  labs(
+    title = "Movies vs TV Shows Added to Netflix Over Time",
+    caption = "Data Sourced form Kaggle.com",
+    x = "Year Added",
+    y = "Number of Titles"
+  ) +
+  guides(color = guide_legend(
+    override.aes = list(size = 2.5, stroke = 0.5))) +
+  theme_classic() +
+  theme(
+    legend.position = c(0.5, 1),
+    legend.justification = c(0.5, 1), # legend positioning
+    legend.direction = "horizontal",
+    legend.text = element_text(size = 11.5),
+    plot.title = element_text(size = 18)
+  ) 
+
+```
+
