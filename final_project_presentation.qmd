@@ -46,7 +46,7 @@ netflix |>
 ```
 :::
 
-## Univariate Analysis
+## Univariate Analysis {.smaller}
 
 ```{r}
 # number of times each genre/category appears in dataset 
@@ -76,6 +76,7 @@ genre_counts |>
     plot.title = element_text(size = 18)
   )
 ```
+Comedies, Dramas, and Independent Movies are the most common genres apparent in this dataset.
 
 ## Univariate Analysis
 
