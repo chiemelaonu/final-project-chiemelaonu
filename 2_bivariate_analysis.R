@@ -61,6 +61,7 @@ netflix |>
     labels = c("Movie", "TV Show")
   ) +
   labs(
+    title = "How Netflix Ratings Differ Between Movies and TV Shows",
     x = "Rating",
     y = "Number of Titles",
     fill = "Type of Listing"
