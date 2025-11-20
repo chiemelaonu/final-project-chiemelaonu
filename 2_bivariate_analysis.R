@@ -53,11 +53,13 @@ netflix |>
 
 
 # type by rating ----
-
-
-counts <- netflix |>
-  count(type, rating)
-
-ggplot(counts, aes(x = rating, y = type, size = n, color = type)) +
-  geom_point() +
+netflix |>
+  ggplot(aes(x = rating, fill = type)) +
+  geom_bar(position = "dodge") +
+  labs(
+    x = "Rating",
+    y = "Number of Titles",
+    fill = "Type of Listing"
+    ) + 
+  theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
