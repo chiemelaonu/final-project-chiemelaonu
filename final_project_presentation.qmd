@@ -155,3 +155,23 @@ netflix |>
 
 ```
 
+## Bivariate Analysis
+
+```{r}
+netflix |>
+  ggplot(aes(x = rating, fill = type)) +
+  geom_bar(position = "dodge") +
+  scale_fill_manual(
+    values = c("Movie" = "#B6ACD1", "TV Show" = "#4E2A84"),
+    labels = c("Movie", "TV Show")
+  ) +
+  labs(
+    x = "Rating",
+    y = "Number of Titles",
+    fill = "Type of Listing"
+    ) + 
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
