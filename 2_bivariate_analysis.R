@@ -19,7 +19,7 @@ netflix |>
     date_added = lubridate::mdy(date_added), # converting col to date type
     year_added = lubridate::year(date_added) # extracting year added
   ) |>
-  na.omit() |>
+  na.omit() |> 
   count(type, year_added) |>
   ggplot(aes(year_added, n, color = type)) +
   geom_line() +
@@ -56,6 +56,10 @@ netflix |>
 netflix |>
   ggplot(aes(x = rating, fill = type)) +
   geom_bar(position = "dodge") +
+  scale_fill_manual(
+    values = c("Movie" = "#B6ACD1", "TV Show" = "#4E2A84"),
+    labels = c("Movie", "TV Show")
+  ) +
   labs(
     x = "Rating",
     y = "Number of Titles",
