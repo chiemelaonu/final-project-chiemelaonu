@@ -18,7 +18,9 @@ execute:
 
 - Data was found on [Kaggle.com](https://www.kaggle.com/datasets/shivamb/netflix-shows)^[Accessed November 2nd, 2025] from user "shivamb". 
 
-## Univariate Analysis {.scrollable}
+## Univariate Analysis { .scrollable .smaller }
+
+There are 42 distinct genres in this dataset.
 
 ::: {.content-center}
 ```{r}
@@ -48,6 +50,7 @@ netflix |>
 
 ```
 :::
+
 
 ## Univariate Analysis {.smaller}
 
