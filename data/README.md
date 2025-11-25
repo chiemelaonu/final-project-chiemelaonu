@@ -1,17 +1,22 @@
-# STAT-302-Final-Project
-This project is intended  
+# Dataset Information
 
-## What is in the Repo
-The repository will have 3 scripts, which will include the initial loading in of data and cleaning the data, the univariate analysis, and the multivariate analysis. The scripts will be organized with comments to understand my thought processes.
+## Data Source 
+Data was found on [Kaggle.com](https://www.kaggle.com/datasets/shivamb/netflix-shows)^[Accessed November 2nd, 2025] from user "shivamb"
 
-### Subfolders
-- `data/`: contains the data for this project
+## Data
+- `netflix_titles.csv`: dataset containing 8000+ observations recording various pieces of information about Netflix titles, such as, the date the title as added, the director(s), the cast, and the rating of the title.
 
-### R scripts
-- `0_data_test.R`: holds the initial reading in, inspection, and tidying of data
-- `1_univariate_analysis.R`: holds the univariate analysis and preliminary EDA
-- `2_bivariate_analysis.R`: holds the more complex and multivariate EDA
+## Codebook
+- `show_id:`
+- `type:`
+- `title:`
+- `director:`
+- `cast:`
+- `country:`
+- `date_added:`
+- `release_year:`
+- `rating:`
+- `duration:`
+- `listed_in:`
+- `description:`
 
-### Presentation
-
-### Memos
