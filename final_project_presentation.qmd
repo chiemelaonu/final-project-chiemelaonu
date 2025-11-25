@@ -167,7 +167,7 @@ netflix |>
 ```
 This plot shows the trends of how many Movie titles were added per year versus how many TV Show titles were added per year. Movies were added to Netflix at a higher frequency starting in 2014 and has increased drastically since then.
 
-## Bivariate Analysis
+## Bivariate Analysis {.smaller}
 
 ```{r}
 #| label: plot-4
@@ -194,3 +194,4 @@ netflix |>
 
 ```
 
+This plot shows how Netflix ratings differ between Movies and TV Shows on the platform. For both movies and TV shows, most of the listings have a rating of either TV-14 or TV-MA.
