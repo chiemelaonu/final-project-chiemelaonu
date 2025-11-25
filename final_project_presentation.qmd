@@ -83,7 +83,7 @@ genre_counts |>
 ```
 Comedies, Dramas, and Independent Movies are the most common genres apparent in this dataset.
 
-## Univariate Analysis
+## Univariate Analysis {.smaller}
 
 ```{r}
 #| label: plot-2
@@ -114,6 +114,8 @@ year_counts |> # plotting frequencies
     plot.title = element_text(size = 18)
   )
 ```
+
+The data records that most titles were added to Netflix between 2016 and 2021, with the highest amount being in 2019 with 2016 titles added.
 
 ## Bivariate Analysis
 
