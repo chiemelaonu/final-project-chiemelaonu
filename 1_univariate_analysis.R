@@ -86,6 +86,11 @@ netflix |>
   ) +
   theme_minimal()
 
+# finding number of titles added during peak year of 2019
+netflix |>
+  filter(lubridate::year(lubridate::mdy(date_added)) == 2019) |>
+  count()
+
 # count number of tv shows and movies in dataset
 netflix |>
   count(type, sort = TRUE) |>
@@ -99,5 +104,6 @@ netflix |>
     y = "Count"
   ) +
   theme_minimal()
+
 
 
