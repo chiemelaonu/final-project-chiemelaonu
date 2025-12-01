@@ -198,3 +198,9 @@ netflix |>
 ```
 
 This plot shows how Netflix ratings differ between Movies and TV Shows on the platform. For both movies and TV shows, most of the listings have a rating of either TV-14 or TV-MA. Netflix's catalog targets a teen or young adult to adult audience when adding listings to the service. 
+
+## Conclusion {.smaller}
+
+This project explored patterns in Netflix’s catalog by focusing on questions such as which genres appear most often, how the number of added titles has changed over time, and how movies and TV shows differ in frequency. The analysis showed that Comedy, Drama, and Independent Movies occur the most. The number of titles added rose sharply between 2016 and 2021, with 2019 having the highest count. Movies appear more often than TV shows throughout the dataset.
+
+These findings give an initial picture of how Netflix may curate its catalog, with emphasis on popular genres and steady growth in content additions. However, this dataset represents only a limited view of the platform. More complete data and deeper research would be required to make stronger conclusions about Netflix’s long-term content strategy.
