@@ -13,6 +13,9 @@ execute:
 -   I chose this data because enjoy inspecting catalogs of shows and movies, so this dataset was a great option for me. There is a bit of a challenge with the data as well, allowing me to touch up on my data wrangling skills.\
 -   The dataset has 12 variables and 8,807 observations, with recorded titles added from 2008 to 2021.
 
+## Github Repo Link
+[Chiemela Onuoha's Github](https://github.com/chiemelaonu/final-project-chiemelaonu)
+
 ## Data Source
 
 -   Data was found on [Kaggle.com](https://www.kaggle.com/datasets/shivamb/netflix-shows)[^1] from user "shivamb".
