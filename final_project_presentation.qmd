@@ -118,7 +118,7 @@ year_counts |> # plotting frequencies
   )
 ```
 
-The data records that most titles were added to Netflix between 2016 and 2021, with the highest amount being in 2019 with 2016 titles added.
+The data records that most titles were added to Netflix between 2016 and 2021, with the highest amount being in 2019 with 2016 titles added.  
 
 ## Bivariate Analysis {.smaller}
 
@@ -168,7 +168,7 @@ netflix |>
   ) 
 
 ```
-This plot shows the trends of how many Movie titles were added per year versus how many TV Show titles were added per year. Movies were added to Netflix at a higher frequency starting in 2014 and has increased drastically since then.
+This plot shows the trends of how many Movie titles were added per year versus how many TV Show titles were added per year. Movies were added to Netflix at a higher frequency starting in 2014 and has increased drastically since then. Netflix focuses more on adding Movies to its service compared to TV Shows, which could be attributed to user demand or from trends of the most popular forms of media over time. More investigation with outside data/sources would be needed to confirm the reasons behind this trend.
 
 ## Bivariate Analysis {.smaller}
 
