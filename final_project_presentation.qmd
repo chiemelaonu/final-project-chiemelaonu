@@ -9,20 +9,21 @@ execute:
 
 ## Introduction
 
-- For this project, I am using a dataset consisting of listings of over 8,000 movies and TV shows available on the Netflix streaming platform.  
-- I chose this data because enjoy inspecting catalogs of shows and movies, so this dataset was a great option for me. There is a bit of a challenge with the data as well, allowing me to touch up on my data wrangling skills.  
-- The dataset has 12 variables and 8,807 observations, with recorded titles added from 2008 to 2021.
-
+-   For this project, I am using a dataset consisting of listings of over 8,000 movies and TV shows available on the Netflix streaming platform.\
+-   I chose this data because enjoy inspecting catalogs of shows and movies, so this dataset was a great option for me. There is a bit of a challenge with the data as well, allowing me to touch up on my data wrangling skills.\
+-   The dataset has 12 variables and 8,807 observations, with recorded titles added from 2008 to 2021.
 
 ## Data Source
 
-- Data was found on [Kaggle.com](https://www.kaggle.com/datasets/shivamb/netflix-shows)^[Accessed November 2nd, 2025] from user "shivamb". 
+-   Data was found on [Kaggle.com](https://www.kaggle.com/datasets/shivamb/netflix-shows)[^1] from user "shivamb".
 
-## Univariate Analysis { .scrollable .smaller }
+[^1]: Accessed November 2nd, 2025
+
+## Univariate Analysis {.scrollable .smaller}
 
 There are 42 distinct genres in this dataset.
 
-::: {.content-center}
+::: content-center
 ```{r}
 #| label: tbl-1
 
@@ -50,7 +51,6 @@ netflix |>
 
 ```
 :::
-
 
 ## Univariate Analysis {.smaller}
 
@@ -84,6 +84,7 @@ genre_counts |>
     plot.title = element_text(size = 18)
   )
 ```
+
 Comedies, Dramas, and Independent Movies are the most common genres apparent in this dataset. Netflix appears to prioritize these genres possibly based on demand or from shared data that shows the 3 aforementioned genres as the more popular genres for movies.
 
 ## Univariate Analysis {.smaller}
@@ -118,7 +119,7 @@ year_counts |> # plotting frequencies
   )
 ```
 
-The data records that most titles were added to Netflix between 2016 and 2021, with the highest amount being in 2019 with 2016 titles added.  
+The data records that most titles were added to Netflix between 2016 and 2021, with the highest amount being in 2019 with 2016 titles added.
 
 ## Bivariate Analysis {.smaller}
 
@@ -168,6 +169,7 @@ netflix |>
   ) 
 
 ```
+
 This plot shows the trends of how many Movie titles were added per year versus how many TV Show titles were added per year. Movies were added to Netflix at a higher frequency starting in 2014 and has increased drastically since then. Netflix focuses more on adding Movies to its service compared to TV Shows, which could be attributed to user demand or from trends of the most popular forms of media over time. More investigation with outside data/sources would be needed to confirm the reasons behind this trend.
 
 ## Bivariate Analysis {.smaller}
@@ -197,7 +199,7 @@ netflix |>
 
 ```
 
-This plot shows how Netflix ratings differ between Movies and TV Shows on the platform. For both movies and TV shows, most of the listings have a rating of either TV-14 or TV-MA. Netflix's catalog targets a teen or young adult to adult audience when adding listings to the service. 
+This plot shows how Netflix ratings differ between Movies and TV Shows on the platform. For both movies and TV shows, most of the listings have a rating of either TV-14 or TV-MA. Netflix's catalog targets a teen or young adult to adult audience when adding listings to the service.
 
 ## Conclusion {.smaller}
 
