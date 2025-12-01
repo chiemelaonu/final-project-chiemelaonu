@@ -84,7 +84,7 @@ genre_counts |>
     plot.title = element_text(size = 18)
   )
 ```
-Comedies, Dramas, and Independent Movies are the most common genres apparent in this dataset.
+Comedies, Dramas, and Independent Movies are the most common genres apparent in this dataset. Netflix appears to prioritize these genres possibly based on demand or from shared data that shows the 3 aforementioned genres as the more popular genres for movies.
 
 ## Univariate Analysis {.smaller}
 
