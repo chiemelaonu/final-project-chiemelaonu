@@ -197,4 +197,4 @@ netflix |>
 
 ```
 
-This plot shows how Netflix ratings differ between Movies and TV Shows on the platform. For both movies and TV shows, most of the listings have a rating of either TV-14 or TV-MA.
+This plot shows how Netflix ratings differ between Movies and TV Shows on the platform. For both movies and TV shows, most of the listings have a rating of either TV-14 or TV-MA. Netflix's catalog targets a teen or young adult to adult audience when adding listings to the service. 
