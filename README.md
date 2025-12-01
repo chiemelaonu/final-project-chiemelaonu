@@ -5,8 +5,9 @@ This project is intended to explore patterns in Netflix’s catalog by focusing 
 The repository will have 3 scripts, which will include the initial loading in of data and cleaning the data, the univariate analysis, and the multivariate analysis. The scripts will be organized with comments to understand my thought processes.
 
 ### Subfolders
-- `data/`: contains the data for this project
-- `final_project_presentation_files/`: contains the files used for creating the `revealjs` presentation
+- [`data`](data): contains the data for this project
+- [`final_project_presentation_files`](final_project_presentation_files): contains the files used for creating the `revealjs` presentation
+- [`memo`](memo): contains the data memo
 
 ### R scripts
 - `0_data_test.R`: holds the initial reading in, inspection, and tidying of data
