@@ -16,7 +16,7 @@ The repository will have 3 scripts, which will include the initial loading in of
 
 ### Presentation
 - `final_project_presentation.html`: the rendered HTML file of the final presentation
-- `final_project_presentation.qmd`: the QMD files of the final presentation
+- `final_project_presentation.qmd`: the QMD file of the final presentation
 
 ### Memos
 - `Onuoha_Chiemela_data_memo.html`: the rendered HTML file of the data memo
