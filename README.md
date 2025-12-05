@@ -1,4 +1,4 @@
-# STAT-302-Final-Project
+# Visualizing Netflix Data
 This project is intended to explore patterns in Netflix’s catalog by focusing on questions such as which genres appear most often, how the number of added titles has changed over time, and how movies and TV shows differ in frequency. 
 
 ## What is in the Repo
